@@ -15,18 +15,9 @@ import java.util.Scanner;
 import algorithms.*;
 import utils.*;
 
-/**
- * 
- * @author Javier Beltran Jorba, Jorge Cancer Gil
- *
- * Clase que contiene el programa principal.
- */
-public class SATSolver {
+public class SATSolver 
+{
 
-	/**
-	 * Obtiene la formula del fichero y comprueba si es
-	 * satisfacible, informando por pantalla.
-	 */
 	public static void main(String[] args) {
 		try {
 			ArrayList<Clause> sentence;
@@ -76,7 +67,7 @@ public class SATSolver {
 						"y hasta " + lit + " literales distintos.");
 			} else {
 				/*
-				 * Lee la formula y la procesa para el programa
+				 * Lee la formula y la procesa para el programa			
 				 */
 				String formula = readFormula(input);
 				input.close();
@@ -236,23 +227,23 @@ public class SATSolver {
 	 * como tiene que introducir la formula CNF
 	 */
 	private static void printMenu() {
-		System.out.println("Este programa calcula si una formula CNF es satisfacible.");
-		System.out.println("Puede introducir la formula CNF a continuacion.");
-		System.out.println("La sintaxis es:");
-		System.out.println("Disyuncion: +");
+		System.out.println("This program calculates if a CNF formula is satisfactory.");
+		System.out.println("You can enter the CNF formula below.");
+		System.out.println("The syntax is:");
+		System.out.println("Disjunction: +");
 		System.out.println("Conjuncion: *");
-		System.out.println("Negacion: -");
-		System.out.println("Las variables deben empezar por letra, y pueden contener letras, numeros y _");
-		System.out.println("Las clausulas pueden aparecer separadas con ( )");
-		System.out.println("La formula CNF puede ocupar varias lineas.");
-		System.out.println("Para indicar que ha terminado su formula, escriba end en una linea nueva.");
+		System.out.println("Negation: -");
+		System.out.println("Variables must start with a letter, and may contain letters, numbers and _");
+		System.out.println("The clauses can appear separated with ()");
+		System.out.println("The CNF formula can occupy several lines.");
+		System.out.println("To indicate that you have finished your formula, write end in a new line.");
 		System.out.println();
-		System.out.println("Un ejemplo de formula CNF seria:");
+		System.out.println("An example of a CNF formula would be:");
 		System.out.println("(x_2 + -x_1 + x_0) * (x_0 + -c) * (x_2 + x_1)");
 		System.out.println("* (x_1+c)");
 		System.out.println("end");
 		System.out.println();
-		System.out.println("Introduzca su formula CNF: ");
+		System.out.println("Enter your CNF formula: ");
 	}
 	
 	/**
